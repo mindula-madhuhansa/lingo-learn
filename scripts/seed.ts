@@ -112,7 +112,7 @@ const main = async () => {
         imageSrc: "/assets/images/man.svg",
         correct: true,
         text: "남자",
-        audioSrc: "/kr_man.mp3",
+        audioSrc: "/assets/audios/kr_man.mp3",
       },
       {
         id: 2,
@@ -120,7 +120,7 @@ const main = async () => {
         imageSrc: "/assets/images/woman.svg",
         correct: false,
         text: "여자",
-        audioSrc: "/kr_woman.mp3",
+        audioSrc: "/assets/audios/kr_woman.mp3",
       },
       {
         id: 3,
@@ -128,7 +128,7 @@ const main = async () => {
         imageSrc: "/assets/images/robot.svg",
         correct: false,
         text: "로봇",
-        audioSrc: "/kr_robot.mp3",
+        audioSrc: "/assets/audios/kr_robot.mp3",
       },
     ]);
 
