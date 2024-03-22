@@ -243,3 +243,24 @@ export const getUserSubscription = cache(async () => {
     isActive: !!isActive,
   };
 });
+
+export const getTopTenUsers = cache(async () => {
+  const { userId } = await auth();
+
+  if (!userId) {
+    return [];
+  }
+
+  const data = await db.query.userProgress.findMany({
+    orderBy: (userProgress, { asc }) => [asc(userProgress.points)],
+    limit: 10,
+    columns: {
+      userId: true,
+      userName: true,
+      userImage: true,
+      points: true,
+    },
+  });
+
+  return data;
+});
