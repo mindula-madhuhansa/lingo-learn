@@ -11,8 +11,8 @@ import { PracticeModal } from "@/components/modals/practice-modal";
 const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LingoLearn",
-  description: "Learn Your Favorite Language",
+  title: "Triolingo",
+  description: "Learn Your Favorite Languages",
 };
 
 export default function RootLayout({
