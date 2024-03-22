@@ -19,6 +19,8 @@ import { Challenge } from "./challenge";
 import { Footer } from "./footer";
 import { ResultCard } from "./result-card";
 
+import { DEFAULT_HEARTS, POINTS_PER_CORRECT_ANSWER } from "@/constants";
+
 type QuizProps = {
   initialLessonId: number;
   initialLessonChallenges: (typeof challenges.$inferSelect & {
@@ -128,7 +130,7 @@ export const Quiz = ({
 
             // This is a practice
             if (initialPercentage === 100) {
-              setHearts((prev) => Math.min(prev + 1, 5));
+              setHearts((prev) => Math.min(prev + 1, DEFAULT_HEARTS));
             }
           })
           .catch(() => toast.error("Something went wrong. Please try again."));
@@ -187,7 +189,10 @@ export const Quiz = ({
           </h1>
 
           <div className="flex items-center gap-x-4 w-full">
-            <ResultCard variant="points" value={challenges.length * 10} />
+            <ResultCard
+              variant="points"
+              value={challenges.length * POINTS_PER_CORRECT_ANSWER}
+            />
             <ResultCard variant="hearts" value={hearts} />
           </div>
         </div>
