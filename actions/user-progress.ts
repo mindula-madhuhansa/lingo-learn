@@ -16,7 +16,7 @@ import { challengeProgress, challenges, userProgress } from "@/db/schema";
 import { DEFAULT_HEARTS, POINTS_TO_REFILL } from "@/constants";
 
 export const upsertUserProgress = async (courseId: number) => {
-  const { userId } = await auth();
+  const { userId } = auth();
   const user = await currentUser();
 
   if (!userId || !user) {
@@ -60,7 +60,7 @@ export const upsertUserProgress = async (courseId: number) => {
 };
 
 export const reduceHearts = async (challengeId: number) => {
-  const { userId } = await auth();
+  const { userId } = auth();
 
   if (!userId) {
     throw new Error("Unauthorized");

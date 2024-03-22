@@ -11,7 +11,7 @@ import { challengeProgress, challenges, userProgress } from "@/db/schema";
 import { DEFAULT_HEARTS, POINTS_PER_CORRECT_ANSWER } from "@/constants";
 
 export const upsertChallengeProgress = async (challengeId: number) => {
-  const { userId } = await auth();
+  const { userId } = auth();
 
   if (!userId) {
     throw new Error("Unauthorized");

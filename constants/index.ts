@@ -28,3 +28,5 @@ export const quests = [
     value: 1000,
   },
 ];
+
+export const adminIds = ["user_2duaP854JsN3Uy4v63TaeDo6lc8"];
