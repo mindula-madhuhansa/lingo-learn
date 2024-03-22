@@ -95,6 +95,7 @@ const main = async () => {
       },
     ]);
 
+    // Nouns
     await db.insert(schema.challenges).values([
       {
         id: 1,
@@ -188,6 +189,31 @@ const main = async () => {
         correct: true,
         text: "로봇",
         audioSrc: "/assets/audios/kr_robot.mp3",
+      },
+    ]);
+
+    // Verbs
+    await db.insert(schema.challenges).values([
+      {
+        id: 4,
+        lessonId: 2,
+        type: "SELECT",
+        order: 1,
+        question: 'Which one of these is the "the man"?',
+      },
+      {
+        id: 5,
+        lessonId: 2,
+        type: "ASSIST",
+        order: 2,
+        question: '"The woman"',
+      },
+      {
+        id: 6,
+        lessonId: 2,
+        type: "SELECT",
+        order: 3,
+        question: 'Which one of these is the "the robot"?',
       },
     ]);
 
