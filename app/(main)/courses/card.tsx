@@ -1,7 +1,7 @@
 import { CheckIcon } from "lucide-react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
 type CardProps = {
   id: number;

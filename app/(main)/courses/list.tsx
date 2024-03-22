@@ -4,9 +4,9 @@ import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { toast } from "sonner";
 
+import { upsertUserProgress } from "@/actions/user-progress";
 import { courses, userProgress } from "@/db/schema";
 import { Card } from "./card";
-import { upsertUserProgress } from "@/actions/user-progress";
 
 type ListProps = {
   courses: (typeof courses.$inferSelect)[];
